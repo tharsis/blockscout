@@ -17,6 +17,7 @@
 - [#4385](https://github.com/blockscout/blockscout/pull/4385) - Fix html template for transaction's input; Add copy text for tuples
 
 ### Chore
+- [#4439](https://github.com/blockscout/blockscout/pull/4439) - Fix revert response in contract's output
 - [#4400](https://github.com/blockscout/blockscout/pull/4400) - Add "Token ID" label onto `tokens/.../instance/.../token-transfers` page
 - [#4398](https://github.com/blockscout/blockscout/pull/4398) - Speed up the transactions loading on the front-end
 - [#4384](https://github.com/blockscout/blockscout/pull/4384) - Fix Elixir version in `.tool-versions`
