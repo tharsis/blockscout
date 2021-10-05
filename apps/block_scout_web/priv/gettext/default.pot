@@ -1139,7 +1139,7 @@ msgstr ""
 #, elixir-format
 #: lib/block_scout_web/templates/chain/show.html.eex:52
 #: lib/block_scout_web/views/block_view.ex:21 lib/block_scout_web/views/wei_helpers.ex:77
-msgid "Gwei"
+msgid "MicroEvmos"
 msgstr ""
 
 #, elixir-format
@@ -2779,7 +2779,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/block_scout_web/templates/smart_contract/_functions.html.eex:130
-msgid "WEI"
+msgid "EVMOS"
 msgstr ""
 
 #, elixir-format
@@ -2799,7 +2799,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/block_scout_web/views/wei_helpers.ex:76
-msgid "Wei"
+msgid "Evmos"
 msgstr ""
 
 #, elixir-format
