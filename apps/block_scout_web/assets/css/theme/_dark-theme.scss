@@ -1,14 +1,14 @@
-$body-dark: #051221; // body background
+$body-dark: #121212; // body background
 $dark-bg: rgba(255, 255, 255, 0.05); // hero shade
-$dark-light-bg: #0b1426; // pills bg shade
-$dark-light: rgba(17,153,250,.1); // tile light top share
-$labels-dark: #8a8dba; // header nav, labels
+$dark-light-bg: rgba(255,255,255, 0.05); // pills bg shade
+$dark-light: rgba(255, 255, 255, 0.1); // tile light top share
+$labels-dark: #cccccc; // header nav, labels
 $dark-stakes-banned-background: #3e314c;
 $dark-card-bg: rgba(255, 255, 255, 0.05);
-$dark-card-tile-bg: rgba(17,153,250,.1);
-$dark-dropdown-menu-bg: #151e2b;
+$dark-card-tile-bg: rgba(255, 255, 255, 0.05);
+$dark-dropdown-menu-bg:#2e2e2e;
 $dark-subtitle-color: #fff; //
-$dark-btn-hover-bg: #43aefb;
+$dark-btn-hover-bg: #646464;
 
 // Switcher
 .dark-mode-changer {
@@ -116,7 +116,7 @@ $dark-btn-hover-bg: #43aefb;
 	}
 	.dashboard-banner-network-stats-label,
 	.dashboard-banner-chart-legend .dashboard-banner-chart-legend-label {
-		color: $labels-dark;
+		color: $dark-subtitle-color;
 	}
 	.dashboard-banner-chart-legend .dashboard-banner-chart-legend-item:nth-child(1)::before {
 		background-color: $dark-primary;
@@ -134,7 +134,7 @@ $dark-btn-hover-bg: #43aefb;
 	}
 
 	.card {
-		background-color: $dark-light-bg;
+		background-color: $dark-card-bg;
 		box-shadow: 0 0 30px 0 rgba(23, 24, 41, 0.5);
 	}
 
@@ -242,7 +242,7 @@ $dark-btn-hover-bg: #43aefb;
 	// btns
 
 	.btn-line {
-		background-color: $dark-primary;
+		background-color: $dark-light;
 		border-color: $dark-primary;
 		color: $dark-subtitle-color;
 		&:hover {
@@ -1025,7 +1025,7 @@ $dark-btn-hover-bg: #43aefb;
 
 	.bs-label {
 		color: #fff;
-		background: #1199FA;
+		background: #6311fa;
 	}
 
 	.bs-label.method {
@@ -1033,7 +1033,7 @@ $dark-btn-hover-bg: #43aefb;
 	}
 
 	.bs-label.omni {
-		background: #6ca1e2
+		background: #9e63e2
 	}
 
     .bs-label.validator,
@@ -1106,7 +1106,7 @@ $dark-btn-hover-bg: #43aefb;
 		  }
 	}
 	.main-search-autocomplete {
-		background-color: $dark-bg !important;
+		background-color: transparent !important;
 		color: #fff !important;
 	}
 	.autocomplete-category {
@@ -1141,7 +1141,7 @@ $dark-btn-hover-bg: #43aefb;
 .dark-theme-applied .dropdown-item.active:not(.header), .dark-theme-applied .dropdown-item:not(.header):hover, .dark-theme-applied .dropdown-item:not(.header):focus {
     background-image: none;
     width: 100%;
-    background-color: #1b3049 !important;
+    background-color: $dark-btn-hover-bg !important;
 }
 
 @media (max-width: 991.98px) {

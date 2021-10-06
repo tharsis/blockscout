@@ -2,8 +2,8 @@
 <% apps_menu = Application.get_env(:block_scout_web, :apps_menu) %>
 <nav class="navbar navbar-dark navbar-expand-lg navbar-primary" data-selector="navbar" id="top-navbar">
   <script>
-    if (localStorage.getItem("current-color-mode") === "dark") {
-      document.getElementById("top-navbar").style.backgroundColor = "#0b1426";
+    if (localStorage.getItem("current-color-mode") != "dark") {
+      document.getElementById("top-navbar").style.backgroundColor = "#191919";
     }
   </script>
   <div class="container-fluid navbar-container">
@@ -14,7 +14,7 @@
       <% end %>
     <% end %>
     <script>
-      if (localStorage.getItem("current-color-mode") === "dark") {
+      if (localStorage.getItem("current-color-mode") != "dark") {
         document.getElementById("navbar-logo").style.filter = "brightness(0) invert(1)";
       }
     </script>
@@ -224,7 +224,7 @@
   <%= render BlockScoutWeb.LayoutView, "_search.html", conn: @conn, id: "main-search-autocomplete-mobile", additional_classes: ["mobile-search-show"] %>
 </nav>
 <script>
-  if (localStorage.getItem("current-color-mode") === "dark") {
+  if (localStorage.getItem("current-color-mode") != "dark") {
     let modeChanger = document.getElementById("dark-mode-changer");
     modeChanger.className += " " + "dark-mode-changer--dark";
   }
