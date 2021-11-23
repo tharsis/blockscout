@@ -1,4 +1,4 @@
-SYSTEM = $(shell uname -s)
+HOST_SYSTEM ?= '$(shell uname -s)'
 HOST = host.docker.internal
 DOCKER_IMAGE = blockscout_prod
 BS_CONTAINER_NAME = blockscout
@@ -6,14 +6,14 @@ PG_CONTAINER_NAME = postgres
 PG_CONTAINER_IMAGE = postgres:12.5
 THIS_FILE = $(lastword $(MAKEFILE_LIST))
 
-ifeq ($(SYSTEM), Linux)
+ifeq ($(HOST_SYSTEM), Linux)
 	HOST=localhost
 endif
 
 DB_URL = postgresql://postgres:@$(HOST):5432/explorer?ssl=false
 BLOCKSCOUT_CONTAINER_PARAMS = -e 'MIX_ENV=prod' \
 															 -e 'DATABASE_URL=$(DB_URL)'
-ifeq ($(SYSTEM), Linux)
+ifeq ($(HOST_SYSTEM), Linux)
 	BLOCKSCOUT_CONTAINER_PARAMS += --network=host
 endif
 ifdef NETWORK
