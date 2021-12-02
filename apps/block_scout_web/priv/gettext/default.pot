@@ -1030,7 +1030,7 @@ msgstr ""
 #: lib/block_scout_web/templates/layout/_topnav.html.eex:87 lib/block_scout_web/templates/layout/_topnav.html.eex:108
 #: lib/block_scout_web/templates/layout/app.html.eex:45 lib/block_scout_web/templates/transaction/_pending_tile.html.eex:20
 #: lib/block_scout_web/templates/transaction/_tile.html.eex:37 lib/block_scout_web/views/wei_helpers.ex:78
-msgid "Evmos"
+msgid "photon"
 msgstr ""
 
 #, elixir-format
@@ -1139,7 +1139,7 @@ msgstr ""
 #, elixir-format
 #: lib/block_scout_web/templates/chain/show.html.eex:52
 #: lib/block_scout_web/views/block_view.ex:21 lib/block_scout_web/views/wei_helpers.ex:77
-msgid "MicroEvmos"
+msgid "nphoton"
 msgstr ""
 
 #, elixir-format
@@ -2799,7 +2799,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/block_scout_web/views/wei_helpers.ex:76
-msgid "Evmos"
+msgid "photon"
 msgstr ""
 
 #, elixir-format

@@ -29,13 +29,13 @@ defmodule BlockScoutWeb.WeiHelpers do
   ## Examples
 
       iex> format_wei_value(%Wei{value: Decimal.new(1)}, :wei)
-      "1 PicoEvmos"
+      "1 aphoton"
 
       iex> format_wei_value(%Wei{value: Decimal.new(1, 10, 12)}, :gwei)
-      "10,000 MicroEvmos"
+      "10,000 nphoton"
 
       iex> format_wei_value(%Wei{value: Decimal.new(1, 10, 21)}, :ether)
-      "10,000 Evmos"
+      "10,000 photon"
 
       # With formatting options
 
@@ -43,7 +43,7 @@ defmodule BlockScoutWeb.WeiHelpers do
       ...>   %Wei{value: Decimal.new(1000500000000000000)},
       ...>   :ether
       ...> )
-      "1.0005 Evmos"
+      "1.0005 photon"
 
       iex> format_wei_value(
       ...>   %Wei{value: Decimal.new(10)},
@@ -73,7 +73,7 @@ defmodule BlockScoutWeb.WeiHelpers do
     end
   end
 
-  defp display_unit(:wei), do: gettext("PicoEvmos")
-  defp display_unit(:gwei), do: gettext("MicroEvmos")
-  defp display_unit(:ether), do: gettext("Evmos")
+  defp display_unit(:wei), do: gettext("aphoton")
+  defp display_unit(:gwei), do: gettext("nphoton")
+  defp display_unit(:ether), do: gettext("photon")
 end

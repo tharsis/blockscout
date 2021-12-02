@@ -18,7 +18,7 @@ defmodule BlockScoutWeb.BlockView do
       |> Kernel.||(0)
       |> BlockScoutWeb.Cldr.Number.to_string!()
 
-    unit_text = gettext("MicroEvmos")
+    unit_text = gettext("nphoton")
 
     "#{average} #{unit_text}"
   end
