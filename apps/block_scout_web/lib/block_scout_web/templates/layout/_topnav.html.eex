@@ -104,7 +104,7 @@
                       to: bridged_tokens_path(@conn, :show, :bsc)
                     ) %>
                 <%= link(
-                      gettext("TEvmos"),
+                      gettext("evmos"),
                       class: "dropdown-item #{tab_status("accounts", @conn.request_path)}",
                       to: address_path(@conn, :index)
                     ) %>
@@ -125,7 +125,7 @@
                       to: tokens_path(@conn, :index)
                     ) %>
                 <%= link(
-                      gettext("tevmos"),
+                      gettext("evmos"),
                       class: "dropdown-item #{tab_status("accounts", @conn.request_path)}",
                       to: address_path(@conn, :index)
                     ) %>
