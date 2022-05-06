@@ -419,7 +419,7 @@ $dark-stakes-banned-background: #3e314c;
 		border-top-color: $dark-primary;
     	border-bottom-color: $dark-primary;
 	}
-	.tooltip > .tooltip-inner {background-color: $dark-primary;}
+	.tooltip > .tooltip-inner {background-color: $dark-primary; color: $body-dark;}
 
 	.tooltip-pale-color.bs-tooltip-top .arrow::before,
 	.tooltip-pale-color.bs-tooltip-auto[x-placement^="top"] .arrow::before {
