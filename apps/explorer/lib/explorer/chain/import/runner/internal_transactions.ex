@@ -609,7 +609,7 @@ defmodule Explorer.Chain.Import.Runner.InternalTransactions do
   end
 
   defp remove_consensus_of_invalid_blocks(repo, invalid_block_numbers) do
-    minimal_block = first_block_to_fetch()
+    minimal_block = EthereumJSONRPC.first_block_to_fetch(:trace_first_block)
 
     if Enum.count(invalid_block_numbers) > 0 do
       update_query =

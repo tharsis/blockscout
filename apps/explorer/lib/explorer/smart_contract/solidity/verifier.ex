@@ -203,7 +203,7 @@ defmodule Explorer.SmartContract.Solidity.Verifier do
           init_without_0x
 
         _ ->
-          bytecode
+          ""
       end
 
     %{
@@ -217,6 +217,9 @@ defmodule Explorer.SmartContract.Solidity.Verifier do
     cond do
       compiler_version_from_input != generated_compiler_version ->
         {:error, :compiler_version}
+
+      bytecode <> arguments_data == blockchain_created_tx_input ->
+        {:ok, %{abi: abi, constructor_arguments: arguments_data}}
 
       generated_bytecode != blockchain_bytecode_without_whisper &&
           !try_library_verification(generated_bytecode, blockchain_bytecode_without_whisper) ->
@@ -256,7 +259,16 @@ defmodule Explorer.SmartContract.Solidity.Verifier do
             contract_source_code,
             contract_name
           ) ->
-        {:error, :constructor_arguments}
+        if try_to_verify_with_unknown_constructor_args(
+             blockchain_created_tx_input,
+             bytecode,
+             blockchain_bytecode_without_whisper,
+             abi
+           ) == arguments_data |> String.trim_trailing() |> String.trim_leading("0x") do
+          {:ok, %{abi: abi}}
+        else
+          {:error, :constructor_arguments}
+        end
 
       true ->
         {:ok, %{abi: abi}}

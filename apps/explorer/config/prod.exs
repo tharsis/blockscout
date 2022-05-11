@@ -1,4 +1,9 @@
-use Mix.Config
+import Config
+
+pool_size =
+  if System.get_env("DATABASE_READ_ONLY_API_URL"),
+    do: String.to_integer(System.get_env("POOL_SIZE", "50")),
+    else: String.to_integer(System.get_env("POOL_SIZE", "40"))
 
 pool_size =
   if System.get_env("DATABASE_READ_ONLY_API_URL"),

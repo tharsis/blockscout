@@ -5,7 +5,7 @@ defmodule Explorer.SmartContract.Solidity.Publisher do
 
   alias Explorer.Chain
   alias Explorer.Chain.SmartContract
-  alias Explorer.SmartContract.CompilerVersion
+  alias Explorer.SmartContract.{CompilerVersion, Helper}
   alias Explorer.SmartContract.Solidity.Verifier
 
   @doc """
@@ -45,7 +45,7 @@ defmodule Explorer.SmartContract.Solidity.Publisher do
     end
   end
 
-  def publish_with_standart_json_input(%{"address_hash" => address_hash} = params, json_input) do
+  def publish_with_standard_json_input(%{"address_hash" => address_hash} = params, json_input) do
     case Verifier.evaluate_authenticity_via_standard_json_input(address_hash, params, json_input) do
       {:ok, %{abi: abi, constructor_arguments: constructor_arguments}, additional_params} ->
         params_with_constructor_arguments =
@@ -91,7 +91,10 @@ defmodule Explorer.SmartContract.Solidity.Publisher do
   end
 
   defp unverified_smart_contract(address_hash, params, error, error_message, json_verification \\ false) do
-    attrs = attributes(address_hash, params)
+    attrs =
+      address_hash
+      |> attributes(params)
+      |> Helper.add_contract_code_md5()
 
     changeset =
       SmartContract.invalid_contract_changeset(

@@ -171,7 +171,7 @@ $dark-btn-hover-bg: #646464;
 		color: $dark-primary;
 	}
 
-	.tile {
+	.tile, .tile-code {
 		border-top-color: transparent;
 		border-bottom-color: transparent;
 		border-right-color: transparent;
@@ -404,7 +404,7 @@ $dark-btn-hover-bg: #646464;
 		border-top-color: $dark-primary;
     	border-bottom-color: $dark-primary;
 	}
-	.tooltip > .tooltip-inner {background-color: $dark-primary;}
+	.tooltip > .tooltip-inner {background-color: $dark-primary; color: $body-dark;}
 
 	.tooltip-pale-color.bs-tooltip-top .arrow::before,
 	.tooltip-pale-color.bs-tooltip-auto[x-placement^="top"] .arrow::before {
