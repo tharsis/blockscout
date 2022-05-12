@@ -172,9 +172,9 @@ $dark-btn-hover-bg: #646464;
 	}
 
 	.tile, .tile-code {
-		border-top-color: transparent;
-		border-bottom-color: transparent;
-		border-right-color: transparent;
+		border-top-color: $dark-primary;
+		border-bottom-color: $dark-primary;
+		border-right-color: $dark-primary;
 		background-color: $dark-card-tile-bg;
 		color: $labels-dark;
 		&:not([class^="tile tile-type"]) {
