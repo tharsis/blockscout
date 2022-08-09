@@ -21,7 +21,7 @@ function getTokenIconUrl (chainID, addressHash) {
   }
 }
 
-function appendTokenIcon ($tokenIconContainer, chainID, addressHash, foreignChainID, foreignAddressHash, displayTokenIcons, size) {
+function appendTokenIcon ($tokenIconContainer, chainID, addressHash, displayTokenIcons, size) {
   const iconSize = size || 20
   let tokenIconURL = null
   if (foreignChainID) {

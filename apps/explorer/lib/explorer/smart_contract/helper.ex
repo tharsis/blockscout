@@ -4,6 +4,7 @@ defmodule Explorer.SmartContract.Helper do
   """
 
   alias Explorer.Chain
+  alias Phoenix.HTML
 
   def queriable_method?(method) do
     method["constant"] || method["stateMutability"] == "view" || method["stateMutability"] == "pure"
@@ -16,7 +17,7 @@ defmodule Explorer.SmartContract.Helper do
   def error?(function), do: function["type"] == "error"
 
   @doc """
-    Checks whether the function which is not queriable can be consider as read function or not. 
+    Checks whether the function which is not queriable can be consider as read function or not.
   """
   @spec read_with_wallet_method?(%{}) :: true | false
   def read_with_wallet_method?(function),
@@ -70,5 +71,14 @@ defmodule Explorer.SmartContract.Helper do
     :md5
     |> :crypto.hash(bytes)
     |> Base.encode16(case: :lower)
+  end
+
+  def sanitize_input(nil), do: nil
+
+  def sanitize_input(input) do
+    input
+    |> HTML.html_escape()
+    |> HTML.safe_to_string()
+    |> String.trim()
   end
 end

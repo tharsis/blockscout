@@ -11,13 +11,6 @@ defmodule Explorer.Counters.AddressTransactionsGasUsageCounter do
   @cache_name :address_transactions_gas_usage_counter
   @last_update_key "last_update"
 
-  @ets_opts [
-    :set,
-    :named_table,
-    :public,
-    read_concurrency: true
-  ]
-
   config = Application.get_env(:explorer, __MODULE__)
   @enable_consolidation Keyword.get(config, :enable_consolidation)
 

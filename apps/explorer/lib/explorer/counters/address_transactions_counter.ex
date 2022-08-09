@@ -98,10 +98,4 @@ defmodule Explorer.Counters.AddressTransactionsCounter do
       _ -> :timer.hours(1)
     end
   end
-
-  defp put_into_db(address, value) do
-    address
-    |> Changeset.change(%{transactions_count: value})
-    |> Repo.update()
-  end
 end
