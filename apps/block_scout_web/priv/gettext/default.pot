@@ -468,8 +468,7 @@ msgid "Blocks Validated"
 msgstr ""
 
 #: lib/block_scout_web/templates/layout/_footer.html.eex:22
-#, elixir-autogen, elixir-format
-msgid "Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks."
+msgid "Blockchain explorer for the Evmos Network."
 msgstr ""
 
 #: lib/block_scout_web/templates/block/_tile.html.eex:64
@@ -1643,8 +1642,7 @@ msgstr ""
 
 #: lib/block_scout_web/views/block_view.ex:61
 #: lib/block_scout_web/views/block_view.ex:66
-#, elixir-autogen, elixir-format
-msgid "Miner Reward"
+msgid "Proposer Reward"
 msgstr ""
 
 #: lib/block_scout_web/templates/common_components/_minimal_proxy_pattern.html.eex:3

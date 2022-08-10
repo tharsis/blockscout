@@ -143,7 +143,7 @@ defmodule Explorer.Mixfile do
     [
       maintainers: ["Blockscout"],
       licenses: ["GPL 3.0"],
-      links: %{"GitHub" => "https://github.com/blockscout/blockscout"}
+      links: %{"GitHub" => "https://github.com/tharsis/evmos"}
     ]
   end
 end
