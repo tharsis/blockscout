@@ -26,11 +26,11 @@
     <%= render_existing(@view_module, "styles.html", assigns) %>
 
     <link rel="apple-touch-icon" sizes="180x180" href="<%= static_path(@conn, "/apple-touch-icon.png") %>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<%= static_path(@conn, "/images/favicon-32x32.png") %>">
-    <link rel="icon" type="image/png" sizes="16x16" href="<%= static_path(@conn, "/images/favicon-16x16.png") %>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= static_path(@conn, "/images/evmos32.png") %>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= static_path(@conn, "/images/evmos16.png") %>">
     <link rel="manifest" href="<%= static_path(@conn, "/manifest.webmanifest") %>">
     <link rel="mask-icon" href="<%= static_path(@conn, "/safari-pinned-tab.svg") %>" color="#5bbad5">
-    <link rel="shortcut icon" type='image/x-icon' href="<%= static_path(@conn, "/images/favicon.ico") %>">
+    <link rel="shortcut icon" type='image/x-icon' href="<%= static_path(@conn, "/images/evmos-favicon.ico") %>">
     <meta name="msapplication-TileColor" content="#7dd79f">
     <meta name="msapplication-config" content="<%= static_path(@conn, "/browserconfig.xml") %>">
     <meta name="theme-color" content="#ffffff">
@@ -45,7 +45,7 @@
         'Less than': '<%= gettext("Less than") %>',
         'Market Cap': '<%= gettext("Market Cap") %>',
         'Price': '<%= gettext("Price") %>',
-        'Ether': '<%= gettext("Ether") %>',
+        'Ether': '<%= gettext("Evmos") %>',
         'Tx/day': '<%= gettext("Tx/day") %>'
       }
     </script>
@@ -54,17 +54,17 @@
   <body>
     <script defer data-cfasync="false">
       function applyDarkMode() {
-        if (localStorage.getItem("current-color-mode") === "dark") {
+        if (localStorage.getItem("current-color-mode") != "dark") {
           document.body.className += " " + "dark-theme-applied";
-          document.body.style.backgroundColor = "#1c1d31";
+          document.body.style.backgroundColor = "#191919";
         }
       }
       window.onload = applyDarkMode()
     </script>
-    <script defer data-cfasync="false">
-      if (localStorage.getItem("current-color-mode") === "dark") {
+    <%# <script defer data-cfasync="false">
+      if (localStorage.getItem("current-color-mode") != "dark") {
         if (document.getElementById("top-navbar")) {
-          document.getElementById("top-navbar").style.backgroundColor = "#282945";
+          document.getElementById("top-navbar").style.backgroundColor = "#191919";
         }
         if (document.getElementById("navbar-logo")) {
           document.getElementById("navbar-logo").style.filter = "brightness(0) invert(1)";
@@ -76,7 +76,7 @@
       }
     </script>
     <script defer data-cfasync="false">
-      if (localStorage.getItem("current-color-mode") === "dark") {
+      if (localStorage.getItem("current-color-mode") != "dark") {
         const search = document.getElementById("main-search-autocomplete")
         const searchMobile = document.getElementById("main-search-autocomplete-mobile")
             if (search && search.style) {
@@ -88,7 +88,7 @@
           searchMobile.style.borderColor = "#22223a";
         }
       }
-    </script>
+    </script> %>
     <% raw_dark_forest_addresses_0_4 = CustomContractsHelpers.get_raw_custom_addresses_list(:dark_forest_addresses) || "" %>
     <% raw_dark_forest_addresses_0_5 = CustomContractsHelpers.get_raw_custom_addresses_list(:dark_forest_addresses_v_0_5) || "" %>
     <% raw_dark_forest_addresses_0_6 = CustomContractsHelpers.get_raw_custom_addresses_list(:dark_forest_addresses_v_0_6) || "" %>
