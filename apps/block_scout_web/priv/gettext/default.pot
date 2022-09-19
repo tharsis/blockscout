@@ -468,7 +468,7 @@ msgid "Blocks Validated"
 msgstr ""
 
 #: lib/block_scout_web/templates/layout/_footer.html.eex:22
-msgid "Blockchain explorer for the Evmos Network."
+msgid "Blockchain explorer for the Evmos Testnet Network."
 msgstr ""
 
 #: lib/block_scout_web/templates/block/_tile.html.eex:64
