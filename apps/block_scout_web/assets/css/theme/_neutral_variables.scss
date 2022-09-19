@@ -1,18 +1,18 @@
 // general
-$primary: #5c34a2;
-$secondary: #87e1a9;
+$primary: #160c26;
+$secondary: #cccccc;
 $tertiary: #bf9cff;
 $additional-font: #fff;
 
 // footer
-$footer-background-color: #3c226a;
+$footer-background-color: $primary;
 $footer-title-color: #fff;
-$footer-text-color: #bda6e7;
+$footer-text-color: #ffffff80;
 $footer-item-disc-color: $secondary;
 .footer-logo { filter: brightness(0) invert(1); }
 
 // dashboard
-$dashboard-line-color-price: $tertiary; // price left border
+$dashboard-line-color-price: $secondary; // price left border
 
 $dashboard-banner-chart-legend-label-color: #dcc8ff;
 $dashboard-stats-item-label-color: $dashboard-banner-chart-legend-label-color;
@@ -74,7 +74,11 @@ $api-text-monospace-color: $primary;
   }
 }
 
-// Dark theme
-$dark-primary: #9b62ff;
-$dark-secondary: #87e1a9;
-$dark-primary-alternate: #7e50d0; 
+$dark-primary: #ffffff;
+$dark-secondary: #cccccc;
+$dark-tertiary: rgba(255, 255, 255, 0.172);
+$dark-primary-alternate: #888888;
+
+.transaction__link {
+	color: $secondary !important
+}

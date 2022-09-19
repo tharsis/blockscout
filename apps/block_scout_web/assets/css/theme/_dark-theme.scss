@@ -1,9 +1,11 @@
-$body-dark: #1c1d31; // body background
-$dark-bg: #22223a; // hero shade
-$dark-light-bg: #282945; // pills bg shade
-$dark-light: #313355; // tile light top share
-$labels-dark: #8a8dba; // header nav, labels
+$body-dark: #121212; // body background
+$dark-bg: #1e1e1e; // hero shade
+$dark-light-bg: rgba(255,255,255, 0.05); // pills bg shade
+$dark-light: rgba(255, 255, 255, 0.1); // tile light top share
+$labels-dark: #cccccc; // header nav, labels
 $dark-stakes-banned-background: #3e314c;
+$dark-subtitle-color: #fff;
+$dark-card-bg: rgba(255, 255, 255, 0.05);
 
 // Switcher
 .dark-mode-changer {
@@ -106,7 +108,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 	.dashboard-banner-network-stats-label,
 	.dashboard-banner-chart-legend .dashboard-banner-chart-legend-label {
-		color: $labels-dark;
+		color: $dark-subtitle-color;
 	}
 	.dashboard-banner-network-stats-item::before {
 		background-color: $dark-secondary;
@@ -143,7 +145,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.card {
-		background-color: $dark-light-bg;
+		background-color: $dark-card-bg;
 		box-shadow: 0 0 30px 0 rgba(23, 24, 41, 0.5);
 	}
 
@@ -302,9 +304,9 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.dropdown-item {
-		color: #fff;
+		color: #343434;
 		&:hover {
-			background-color: rgba(#fff, .1);
+			background-color: rgba(52,52,52,255);
 		}
 	}
 	.dropdown-item.active {
@@ -973,7 +975,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.bs-label.omni {
-		background: #6ca1e2
+		background: #99a0a8
 	}
 
     .bs-label.validator,
@@ -1046,7 +1048,7 @@ $dark-stakes-banned-background: #3e314c;
 		  }
 	}
 	.main-search-autocomplete {
-		background-color: $dark-bg !important;
+		background-color: transparent !important;
 		color: #fff !important;
 	}
 	.autocomplete-category {
@@ -1074,14 +1076,14 @@ $dark-stakes-banned-background: #3e314c;
 }
 
 .dark-theme-applied .dropdown-item {
-	background-color: $dark-light !important;
+	background-color:  #353535 !important;
 	color: #fff !important;
 }
 
 .dark-theme-applied .dropdown-item.active:not(.header), .dark-theme-applied .dropdown-item:not(.header):hover, .dark-theme-applied .dropdown-item:not(.header):focus {
     background-image: none;
     width: 100%;
-    background-color: #3f426c !important;
+    background-color: #757575 !important;
 }
 
 @media (max-width: 991.98px) {
