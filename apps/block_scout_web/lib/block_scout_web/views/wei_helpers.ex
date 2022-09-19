@@ -75,5 +75,5 @@ defmodule BlockScoutWeb.WeiHelpers do
 
   defp display_unit(:wei), do: gettext("atevmos")
   defp display_unit(:gwei), do: gettext("ntevmos")
-  defp display_unit(:ether), do: gettext("tEvmos")
+  defp display_unit(:ether), do: gettext("tevmos")
 end
